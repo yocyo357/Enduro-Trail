@@ -1,0 +1,28 @@
+.signup-MainDiv {
+    background-color: #212121;
+    margin: 0;
+    height: 100% !important;
+}
+
+
+.signup-inputs {
+    background-color: #212121;
+    padding: 2% !important;
+}
+
+.MuiFormControl-root, #signup-txt_username {
+    width: 30% !important;
+    background-color: #ADB8CA;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-color: #ffffff;
+    margin-bottom: 1% !important;
+    font-size: 15px !important;
+
+}
+
+#signup-txt_username, .MuiInputBase-input{
+    /* color: red !; */
+}
