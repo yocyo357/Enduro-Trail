@@ -8,6 +8,7 @@
 .signup-inputs {
     background-color: #212121;
     padding: 2% !important;
+    text-align: center;
 }
 
 .MuiFormControl-root, #signup-txt_username {
@@ -23,6 +24,13 @@
 
 }
 
-#signup-txt_username, .MuiInputBase-input{
-    /* color: red !; */
+.signup_button {
+    background-color: #00AF4F !important;
+    width: 27%;
+    margin-top: 2% !important;
+}
+
+.signup_button, .MuiButton-label {
+    font-size: 18px;
+    color: white;
 }
