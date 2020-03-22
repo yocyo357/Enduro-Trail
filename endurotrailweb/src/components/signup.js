@@ -3,6 +3,8 @@ import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import AlarmIcon from '@material-ui/core/';
 import { green, purple } from '@material-ui/core/colors';
 import '../styles/signup.css';
 
@@ -14,7 +16,9 @@ class signup extends Component {
             <div className="signup-MainDiv">
                 <Container className="signup-container">
                     <section className="signup-heading">
-                        sdsd
+                    <IconButton color="secondary" aria-label="add an alarm">
+                        GO BACK
+                    </IconButton>
                     </section>
 
                     <section className="signup-inputs">
