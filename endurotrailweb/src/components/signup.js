@@ -10,6 +10,25 @@ import '../styles/signup.css';
 
 
 class signup extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+           fname:''
+            
+        }
+    
+    
+ 
+        this.BtnSubmitClicked = (event) => {
+            
+        }
+
+        this.changeFnameHandler = (event) => {
+            console.log(this.setState({fname: event.target.value}));
+        }
+    }
+
     render() {
         return (
             <div className="container-fluid signup-MainDiv">
@@ -32,15 +51,15 @@ class signup extends Component {
                             <h2 className="mainTitle">Create Your New Account</h2>
                             <h4 className="subTitle">In a orci enim. Ut blandit justo in tempor interdum.</h4>
                             <form noValidate autoComplete="off" >
-                                <TextField id="txt-SignUpFname"  className="SignUp-inputs" label="First name" />
+                                <TextField id="txt-SignUpFname" value={this.state.fname} onChange={this.changeFnameHandler}  className="SignUp-inputs" label="First name" />
                                 <TextField id="txt-SignUpLname" className="SignUp-inputs" label="Last name" />
-                                {/* <div class="w-100"></div> */}
+                              
                             </form>
                         </div>
                         
                         <div className="container-fluid">
                             <div className="w-100">
-                                <TextField id="txt-SignUpUname" fullWidth className="SignUp-inputs" label="Enter Your Username Here" />
+                                <TextField id="txt-SignUpUname"  fullWidth className="SignUp-inputs" label="Enter Your Username Here" />
                                 <div className="w-100"></div>
                             </div>
                             <form noValidate autoComplete="off" >
@@ -60,9 +79,10 @@ class signup extends Component {
                                 </div>
                             </form>
 
-                            <Button id="btn-submit" fullWidth variant="contained" color="primary">
+                            <Button id="btn-submit" fullWidth variant="contained" color="primary" onClick={ (e) => { this.BtnSubmitClicked() }}>
                                 Primary
                             </Button><br/>
+
                             <a href="#" className="link-back">Already have an account?</a>
                         </div>
                     </div>
