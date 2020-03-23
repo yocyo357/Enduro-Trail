@@ -5,7 +5,13 @@ import LogIn from './components/login';
 import SignUp from './components/signup';
 import PostRaces from './components/postraces';
 
+function writeUserData(email, fname, lname) {
+
+}
+
 function App() {
+
+ 
   return (
     <div className="container-fluid">
       <PostRaces />
