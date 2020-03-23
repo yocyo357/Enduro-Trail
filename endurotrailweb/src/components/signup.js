@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Radio from '@material-ui/core/Radio';
+import FormLabel from '@material-ui/core/FormLabel';
+import RadioGroup from '@material-ui/core/RadioGroup';
 import '../styles/signup.css';
 
 
@@ -9,9 +13,10 @@ class signup extends Component {
     render() {
         return (
             <div className="container-fluid signup-MainDiv">
-                <div class="row">
+                <div className="row">
                     <div className="col left-col">
-                        <h1>Lorem Ipsum</h1>
+                       
+                        <h1 className="leftMainTitle">Lorem Ipsum</h1>
 
                         <h4 className="leftSubWords">
                             <span>Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Vivamus pretium ligula in justo malesuada aliquam. Sed a sem non arcu tempus.
@@ -34,17 +39,32 @@ class signup extends Component {
                         </div>
                         
                         <div className="container-fluid">
-                            <div class="w-100">
+                            <div className="w-100">
                                 <TextField id="txt-SignUpUname" fullWidth className="SignUp-inputs" label="Enter Your Username Here" />
-                                <div class="w-100"></div>
-
+                                <div className="w-100"></div>
                             </div>
                             <form noValidate autoComplete="off" >
-                                    <TextField id="txt-SignUpPass"  className="SignUp-inputs" label="Enter Password" />
-                                    <TextField id="txt-SignUpPassConfirm" className="SignUp-inputs" label="Please Confirm Password" />
+                                    <TextField id="txt-SignUpPass"  className="SignUp-inputs" type="password" label="Enter Password" />
+                                    <TextField id="txt-SignUpPassConfirm" className="SignUp-inputs" type="password" label="Please Confirm Password" />
                             </form>
-                        </div>
+                            <div className="w-100"></div>
+                            <form noValidate autoComplete="off" >
+                                <div className="row SignUpTeamName">
+                                    <TextField id="txt-SignUpAge"  className="SignUp-inputs" type="datepicker" label="Birthdate" />  
+                                </div>
 
+                                <div className="w-100"></div>
+
+                                <div className="row SignUpAge">
+                                    <TextField id="txt-SignUpTeamName"  className="SignUp-inputs" label="Enter Name of Team" />
+                                </div>
+                            </form>
+
+                            <Button id="btn-submit" fullWidth variant="contained" color="primary">
+                                Primary
+                            </Button><br/>
+                            <a href="#" className="link-back">Already have an account?</a>
+                        </div>
                     </div>
                 </div>
             </div>
