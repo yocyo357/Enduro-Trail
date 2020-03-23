@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import AlarmIcon from '@material-ui/core/';
-import { green, purple } from '@material-ui/core/colors';
 import '../styles/signup.css';
 
 
@@ -13,65 +8,26 @@ import '../styles/signup.css';
 class signup extends Component {
     render() {
         return (
-            <div className="signup-MainDiv">
-                <Container className="signup-container">
-                    <section className="signup-heading">
-                    <IconButton color="secondary" aria-label="add an alarm">
-                        GO BACK
-                    </IconButton>
-                    </section>
+            <div className="container-fluid signup-MainDiv">
+                <div class="row">
+                    <div className="col left-col">
+                        <h1>Lorem Ipsum</h1>
 
-                    <section className="signup-inputs">
-                         <TextField
-                            id="outlined-name signup-txt_username"
-                            label="Username"
-                            variant="outlined"
-                            
-                        /><br />
+                        <h3>
+                            <span>Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Vivamus pretium ligula in justo malesuada aliquam. Sed a sem non arcu tempus.
+                        </h3>
+                    </div>
+                    <div className="col">
+                        <form noValidate autoComplete="off" className="form-personalData">
+                            <TextField id="txt-SignUpFname" className="SignUp-inputs" label="First name" />
+                            <TextField id="txt-SignUpLname" className="SignUp-inputs" label="Last name" />
+                            <div class="w-100"></div>
+                            <TextField id="txt-SignUpLname" className="SignUp-inputs" label="Last name" />
+                        </form>
 
-                        <TextField
-                            id="outlined-name signup-txt_Fname"
-                            label="Firstname"
-                            variant="outlined"
-                        /><br />
-
-                        <TextField
-                            id="outlined-name signup-txt_Lname"
-                            label="Lastname"
-                            variant="outlined"
-                        /><br />
-
-                        <TextField
-                            id="outlined-name signup-txt_Age"
-                            label="Your Age"
-                            variant="outlined"
-                        /><br />
-
-                        <TextField
-                            id="outlined-name signup-txt_team"
-                            label="Team Name"
-                            variant="outlined"
-                        /><br />
-
-                        <TextField
-                            id="outlined-name signup-txt_pass"
-                            label="Password"
-                            variant="outlined"
-                        /><br />
-
-                        <TextField
-                            id="outlined-name signup-txt_confpass"
-                            label="Confirm Password"
-                            variant="outlined"
-                        /><br />
-
-                        <Button variant="contained" className="signup_button">
-                            Primary
-                        </Button>
-                    </section>
-                </Container>
+                    </div>
+                </div>
             </div>
-            
         );
     }
 }   

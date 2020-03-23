@@ -6,7 +6,7 @@ import SignUp from './components/signup';
 
 function App() {
   return (
-    <div>
+    <div className="container-fluid">
       <SignUp />
     </div>
   );
