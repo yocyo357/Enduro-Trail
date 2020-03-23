@@ -15,18 +15,39 @@ html, body {
        padding-top: 5%;
     }
 
+    .leftSubWords {
+        font-size: 18px !important;
+    }
+
+
     h3 {
         text-align: justify;
         font-weight: 200 !important;
     }
-    
+
     span {
         color: tomato;  
         font-weight: bold;
     }
 
+
+    /*************** right colum starts here *******************/
+
+    .mainTitle {
+        margin-top: 10% !important;
+        font-size: 40px !important;
+        margin-bottom: 0% !important;
+    }
+
+    .subTitle {
+        font-weight: 300 !important;
+        font-size: 15px !important;
+        margin-bottom: 5% !important;
+    }
+
     .w-100{
         margin-bottom: 1%;
+        padding-right: 19% !important;
     }
 
     .MuiFormControl-root {
@@ -52,5 +73,11 @@ html, body {
         margin-bottom: 1.5%;
     }
 
+    .MuiFormControl-root .MuiTextField-root #txt-SignUpUname {
+        width: 100% !important;
+    }
 
+    .txt-SignUpPass {
+        margin-top: 1.5% !important;
+    }
 }
