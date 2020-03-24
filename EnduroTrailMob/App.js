@@ -24,7 +24,7 @@ import Login from './Screens/LandingScreen/Login/Login'
 import Signup from './Screens/LandingScreen/Signup/Signup'
 import Record from './Screens/Record/Record'
 import Profile from './Screens/Profile/Profile'
-
+import Notifications from './Screens/Notifications/Notifications'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -44,9 +44,13 @@ function Tabs() {
         let iconName;
 
         if (route.name === 'Home') {
-          iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
-        } else if (route.name === 'BikeShop') {
-          iconName = focused ? 'ios-list-box' : 'ios-list';
+          iconName = focused ? 'ios-home' :'ios-home';
+        } else if (route.name === 'Record') {
+          iconName = focused ? 'ios-add-circle' : 'ios-add-circle-outline';
+        } else if (route.name === 'BikeShop'){
+          iconName = focused ? 'md-bicycle' : 'md-bicycle';
+        }else if (route.name === 'Profile'){
+          iconName = focused ? 'ios-contact': 'ios-contact';
         }
 
         // You can return any component that you like here!
@@ -59,7 +63,9 @@ function Tabs() {
     }}
     >
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Record" component={Record} />
       <Tab.Screen name="BikeShop" component={BikeShop} />
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   )
 }
@@ -72,6 +78,7 @@ function Stacks() {
       <Stack.Screen name="Tabs" component={Tabs} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Signup" component={Signup} />
+      <Stack.Screen name="Notifications" component={Notifications} />
     </Stack.Navigator>
   )
 }

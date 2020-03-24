@@ -6,6 +6,12 @@ import {
 
 } from 'react-native';
 import { Container, Header, Content, Button, Text, Icon, Left, Right, Body, Item, Input } from 'native-base';
+import firebase, { storage } from 'firebase'
+import { config } from '../../../Firebase/index'
+
+if (!firebase.apps.length) {
+    firebase.initializeApp(config())
+}
 class SignUp extends Component {
     constructor(props) {
         super(props);
@@ -31,6 +37,11 @@ class SignUp extends Component {
     }
     test() {
         alert(this.state.text.username + " " + this.state.text.firstname + " " + this.state.text.lastname)
+    }
+    onSubmitHandler = ()=>{
+        alert('done')
+        var datas = firebase.database().ref('Users')
+        datas.push(this.state.text);
     }
     componentDidMount() {
 
@@ -62,7 +73,7 @@ class SignUp extends Component {
 
                         <Button
                             success
-                            onPress={() => this.test()}
+                            onPress={() => this.onSubmitHandler()}
                             style={styles.button} block>
                             <Text>Login</Text>
                         </Button>

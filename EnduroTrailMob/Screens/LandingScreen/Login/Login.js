@@ -4,6 +4,14 @@ import {
     View,
     StyleSheet
 } from 'react-native';
+
+import firebase, { storage } from 'firebase'
+import { config } from '../../../Firebase/index'
+
+if (!firebase.apps.length) {
+    firebase.initializeApp(config())
+}
+
 import { Container, Header, Content, Button, Text, Icon, Left, Right, Body, Item, Input } from 'native-base';
 import { TextInput } from 'react-native-gesture-handler';
 class Login extends Component {
@@ -21,6 +29,22 @@ class Login extends Component {
         text[igKey] = value
         this.setState({ text: text })
     }
+
+    onSubmitHander=()=>{
+
+        var datas = firebase.database().ref('Users/')
+        datas.update(this.state.text);
+        // firebase.database().ref('Users/').set({
+           
+        // }).then((data)=>{
+        //     //success callback
+        //     console.log('data ' , data)
+        // }).catch((error)=>{
+        //     //error callback
+        //     console.log('error ' , error)
+        // })
+    }
+
     render() {
         const placeholder = ['Username', 'Password']
         const TextInputs = Object.keys(this.state.text)
